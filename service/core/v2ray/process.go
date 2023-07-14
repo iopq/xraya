@@ -245,6 +245,8 @@ func StartCoreProcess(ctx context.Context) (*os.Process, error) {
 	os.Setenv("XRAY_LOCATION_ASSET", xray)
 	os.Setenv("V2RAY_LOCATION_ASSET", v2ray)
 
+	log.Debug(strings.Join(env, " "))
+
 	if service.CheckMemconservativeSupported() == nil {
 		memstat, err := mem.VirtualMemory()
 		if err != nil {
