@@ -233,13 +233,18 @@ func StartCoreProcess(ctx context.Context) (*os.Process, error) {
 	}
 	log.Debug(strings.Join(arguments, " "))
 	assetDir := asset.GetV2rayLocationAssetOverride()
-	env := append(
-		[]string{
-			"V2RAY_LOCATION_ASSET=" + assetDir,
-			"XRAY_LOCATION_ASSET=" + assetDir,
-		},
-		os.Environ()...,
-	)
+
+	var xray = os.Getenv("XRAY_LOCATION_ASSET")
+	var v2ray = os.Getenv("V2RAY_LOCATION_ASSET")
+
+	os.Setenv("XRAY_LOCATION_ASSET", assetDir)
+	os.Setenv("V2RAY_LOCATION_ASSET", assetDir)
+	
+	var env = os.Environ()
+	
+	os.Setenv("XRAY_LOCATION_ASSET", xray)
+	os.Setenv("XRAY_LOCATION_ASSET", v2ray)
+
 	if service.CheckMemconservativeSupported() == nil {
 		memstat, err := mem.VirtualMemory()
 		if err != nil {
