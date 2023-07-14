@@ -50,7 +50,7 @@ func GetV2rayLocationAsset(filename string) (string, error) {
 	// check if *RAY_LOCATION_ASSET is set
 	if location != "" {
 		//the folder is part of the location
-		folder = getLastFolderName(location)
+		folder = filepath.Base(location)
 		
 		// add *RAY_LOCATION_ASSET to search path
 		searchPaths := []string{
