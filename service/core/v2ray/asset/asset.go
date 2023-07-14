@@ -47,9 +47,12 @@ func GetV2rayLocationAsset(filename string) (string, error) {
 	}
 
 	location = os.Getenv(location)
-	// check if V2RAY_LOCATION_ASSET is set
+	// check if *RAY_LOCATION_ASSET is set
 	if location != "" {
-		// add V2RAY_LOCATION_ASSET to search path
+		//the folder is part of the location
+		folder = getLastFolderName(location)
+		
+		// add *RAY_LOCATION_ASSET to search path
 		searchPaths := []string{
 			filepath.Join(location, filename),
 		}
@@ -68,7 +71,7 @@ func GetV2rayLocationAsset(filename string) (string, error) {
 			// return the first path that exists
 			return searchPath, nil
 		}
-		// or download asset into V2RAY_LOCATION_ASSET
+		// or download asset into *RAY_LOCATION_ASSET
 		return searchPaths[0], nil
 	} else {
 		if runtime.GOOS != "windows" {
