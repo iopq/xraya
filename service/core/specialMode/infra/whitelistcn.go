@@ -5,7 +5,7 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/v2fly/v2ray-core/v4/common/strmatcher"
 	"github.com/v2rayA/v2ray-lib/router/routercommon"
-	"github.com/xbclub/xraya/core/v2ray/asset"
+	"github.com/iopq/xraya/core/v2ray/asset"
 	"os"
 	"regexp"
 	"sync"

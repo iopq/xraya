@@ -3,7 +3,7 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
-	"github.com/xbclub/xraya/server/service"
+	"github.com/iopq/xraya/server/service"
 	"net/http"
 )
 

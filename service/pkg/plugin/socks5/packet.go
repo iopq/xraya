@@ -1,10 +1,10 @@
 package socks5
 
 import (
-	"github.com/xbclub/xraya/pkg/plugin/socks"
+	"github.com/iopq/xraya/pkg/plugin/socks"
 	"net"
 
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/pkg/util/log"
 )
 
 // PktConn .

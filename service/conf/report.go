@@ -2,7 +2,7 @@ package conf
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/common"
+	"github.com/iopq/xraya/common"
 	log2 "log"
 	"runtime"
 	"strings"

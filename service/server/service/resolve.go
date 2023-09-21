@@ -2,7 +2,7 @@ package service
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/core/serverObj"
+	"github.com/iopq/xraya/core/serverObj"
 	"net/url"
 	"strings"
 )

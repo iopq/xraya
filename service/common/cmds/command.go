@@ -2,7 +2,7 @@ package cmds
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/pkg/util/log"
 	"os/exec"
 	"strings"
 )

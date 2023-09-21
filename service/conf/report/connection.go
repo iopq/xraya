@@ -2,10 +2,10 @@ package report
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/core/ipforward"
-	"github.com/xbclub/xraya/core/v2ray/where"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/core/ipforward"
+	"github.com/iopq/xraya/core/v2ray/where"
+	"github.com/iopq/xraya/db/configure"
 	"strings"
 )
 

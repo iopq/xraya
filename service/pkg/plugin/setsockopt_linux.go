@@ -5,7 +5,7 @@ package plugin
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/pkg/util/log"
 	"golang.org/x/sys/unix"
 	"net"
 	"runtime"

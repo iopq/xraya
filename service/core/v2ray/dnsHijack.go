@@ -2,7 +2,7 @@ package v2ray
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/core/specialMode"
+	"github.com/iopq/xraya/core/specialMode"
 	"os"
 	"time"
 )

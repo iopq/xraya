@@ -2,10 +2,10 @@ package specialMode
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/common/netTools/netstat"
-	"github.com/xbclub/xraya/common/netTools/ports"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/common/netTools/netstat"
+	"github.com/iopq/xraya/common/netTools/ports"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/db/configure"
 	"net"
 	"os"
 	"strconv"

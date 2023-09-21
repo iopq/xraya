@@ -2,7 +2,7 @@ package netTools
 
 import (
 	"bytes"
-	"github.com/xbclub/xraya/infra/dataStructure/trie"
+	"github.com/iopq/xraya/infra/dataStructure/trie"
 	"net"
 	"strconv"
 	"strings"

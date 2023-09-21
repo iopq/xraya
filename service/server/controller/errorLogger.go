@@ -2,7 +2,7 @@ package controller
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/pkg/util/log"
 )
 
 func logError(err interface{}) error {

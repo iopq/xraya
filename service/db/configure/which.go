@@ -2,8 +2,8 @@ package configure
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/common/resolv"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common/resolv"
+	"github.com/iopq/xraya/pkg/util/log"
 	"net"
 	"sort"
 	"strconv"

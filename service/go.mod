@@ -1,4 +1,4 @@
-module github.com/xbclub/xraya
+module github.com/iopq/xraya
 
 go 1.17
 

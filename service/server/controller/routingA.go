@@ -3,8 +3,8 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/v2rayA/RoutingA"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/db/configure"
 	"regexp"
 	"strings"
 )

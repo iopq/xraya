@@ -2,7 +2,7 @@ package iptables
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/common/cmds"
+	"github.com/iopq/xraya/common/cmds"
 	"strings"
 )
 

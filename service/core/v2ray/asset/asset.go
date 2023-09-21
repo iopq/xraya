@@ -3,9 +3,9 @@ package asset
 import (
 	"fmt"
 	"github.com/muhammadmuzzammil1998/jsonc"
-	"github.com/xbclub/xraya/common/files"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common/files"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/pkg/util/log"
 	"io"
 	"net/http"
 	"os"

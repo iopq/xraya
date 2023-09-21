@@ -2,8 +2,8 @@ package serverObj
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/pkg/util/log"
 	"net"
 	"net/url"
 	"regexp"

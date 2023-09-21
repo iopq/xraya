@@ -2,12 +2,12 @@ package v2ray
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/common/resolv"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/core/specialMode"
-	"github.com/xbclub/xraya/core/v2ray/asset"
-	"github.com/xbclub/xraya/db/configure"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common/resolv"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/core/specialMode"
+	"github.com/iopq/xraya/core/v2ray/asset"
+	"github.com/iopq/xraya/db/configure"
+	"github.com/iopq/xraya/pkg/util/log"
 	"os/exec"
 	"sync"
 )

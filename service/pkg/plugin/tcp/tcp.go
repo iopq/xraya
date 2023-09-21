@@ -2,8 +2,8 @@ package tcp
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/pkg/plugin"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/pkg/plugin"
+	"github.com/iopq/xraya/pkg/util/log"
 	"io"
 	"net"
 	"net/url"

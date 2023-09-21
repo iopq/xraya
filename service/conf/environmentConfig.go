@@ -3,8 +3,8 @@ package conf
 import (
 	"fmt"
 	"github.com/stevenroose/gonfig"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/pkg/util/log"
 	log2 "log"
 	"os"
 	"path/filepath"

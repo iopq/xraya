@@ -3,7 +3,7 @@ package serverObj
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/xbclub/xraya/common/ntp"
+	"github.com/iopq/xraya/common/ntp"
 	"net"
 	"net/url"
 	"regexp"

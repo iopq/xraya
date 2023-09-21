@@ -1,7 +1,7 @@
 package ports
 
 import (
-	"github.com/xbclub/xraya/common/netTools/netstat"
+	"github.com/iopq/xraya/common/netTools/netstat"
 	"strconv"
 	"strings"
 )

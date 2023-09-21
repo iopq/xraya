@@ -1,7 +1,7 @@
 package common
 
 import (
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/db/configure"
 	"testing"
 )
 

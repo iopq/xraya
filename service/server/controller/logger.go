@@ -9,8 +9,8 @@ import (
 	"unsafe"
 
 	"github.com/gin-gonic/gin"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/conf"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/conf"
 )
 
 type getLogQuery struct {

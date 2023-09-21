@@ -1,7 +1,7 @@
 package infra
 
 import (
-	"github.com/xbclub/xraya/pkg/plugin"
+	"github.com/iopq/xraya/pkg/plugin"
 	"net"
 	"syscall"
 	"time"

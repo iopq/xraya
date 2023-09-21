@@ -12,9 +12,9 @@ package socks5
 import (
 	"fmt"
 	"github.com/v2rayA/shadowsocksR/tools/leakybuf"
-	"github.com/xbclub/xraya/pkg/plugin"
-	"github.com/xbclub/xraya/pkg/plugin/socks"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/pkg/plugin"
+	"github.com/iopq/xraya/pkg/plugin/socks"
+	"github.com/iopq/xraya/pkg/util/log"
 	"io"
 	"net"
 	"net/url"

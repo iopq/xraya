@@ -2,8 +2,8 @@ package iptables
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/common/cmds"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/common/cmds"
+	"github.com/iopq/xraya/db/configure"
 	"strings"
 )
 

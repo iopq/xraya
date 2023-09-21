@@ -3,8 +3,8 @@ package serverObj
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/core/coreObj"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/core/coreObj"
 	"net"
 	"net/url"
 	"strconv"

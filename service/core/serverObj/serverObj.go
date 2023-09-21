@@ -2,9 +2,9 @@ package serverObj
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/core/coreObj"
-	"github.com/xbclub/xraya/core/v2ray/where"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/core/coreObj"
+	"github.com/iopq/xraya/core/v2ray/where"
 	"net/url"
 )
 

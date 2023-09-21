@@ -2,10 +2,10 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/core/touch"
-	"github.com/xbclub/xraya/db/configure"
-	"github.com/xbclub/xraya/server/service"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/core/touch"
+	"github.com/iopq/xraya/db/configure"
+	"github.com/iopq/xraya/server/service"
 )
 
 /*修改Remarks*/

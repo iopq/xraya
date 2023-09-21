@@ -2,8 +2,8 @@ package service
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/core/v2ray"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/core/v2ray"
+	"github.com/iopq/xraya/db/configure"
 	"strconv"
 )
 

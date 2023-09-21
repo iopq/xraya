@@ -2,8 +2,8 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/core/v2ray/asset/dat"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/core/v2ray/asset/dat"
 )
 
 func PutGFWList(ctx *gin.Context) {

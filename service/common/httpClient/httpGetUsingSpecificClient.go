@@ -2,7 +2,7 @@ package httpClient
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/conf"
+	"github.com/iopq/xraya/conf"
 	"net/http"
 )
 

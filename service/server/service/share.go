@@ -2,7 +2,7 @@ package service
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/db/configure"
 )
 
 func GetSharingAddress(w *configure.Which) (addr string, err error) {

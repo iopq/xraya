@@ -3,9 +3,9 @@ package db
 import (
 	"fmt"
 	"github.com/boltdb/bolt"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/pkg/util/copyfile"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/pkg/util/copyfile"
+	"github.com/iopq/xraya/pkg/util/log"
 	"os"
 	"path/filepath"
 	"sync"

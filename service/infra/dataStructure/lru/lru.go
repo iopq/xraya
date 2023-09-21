@@ -1,7 +1,7 @@
 package lru
 
 import (
-	"github.com/xbclub/xraya/infra/dataStructure/linklist"
+	"github.com/iopq/xraya/infra/dataStructure/linklist"
 	"sync"
 	"time"
 )

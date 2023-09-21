@@ -2,7 +2,7 @@ package reqCache
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/xbclub/xraya/common"
+	"github.com/iopq/xraya/common"
 	"sync"
 )
 

@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/xbclub/xraya/conf"
+	"github.com/iopq/xraya/conf"
 	"golang.org/x/sys/unix"
 )
 

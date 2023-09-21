@@ -2,17 +2,17 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	_ "github.com/xbclub/xraya/conf/report"
-	_ "github.com/xbclub/xraya/pkg/plugin/pingtunnel"
-	_ "github.com/xbclub/xraya/pkg/plugin/simpleobfs"
-	_ "github.com/xbclub/xraya/pkg/plugin/socks5"
-	_ "github.com/xbclub/xraya/pkg/plugin/ss"
-	_ "github.com/xbclub/xraya/pkg/plugin/ssr"
-	_ "github.com/xbclub/xraya/pkg/plugin/tcp"
-	_ "github.com/xbclub/xraya/pkg/plugin/tls"
-	_ "github.com/xbclub/xraya/pkg/plugin/trojanc"
-	_ "github.com/xbclub/xraya/pkg/plugin/ws"
-	"github.com/xbclub/xraya/pkg/util/log"
+	_ "github.com/iopq/xraya/conf/report"
+	_ "github.com/iopq/xraya/pkg/plugin/pingtunnel"
+	_ "github.com/iopq/xraya/pkg/plugin/simpleobfs"
+	_ "github.com/iopq/xraya/pkg/plugin/socks5"
+	_ "github.com/iopq/xraya/pkg/plugin/ss"
+	_ "github.com/iopq/xraya/pkg/plugin/ssr"
+	_ "github.com/iopq/xraya/pkg/plugin/tcp"
+	_ "github.com/iopq/xraya/pkg/plugin/tls"
+	_ "github.com/iopq/xraya/pkg/plugin/trojanc"
+	_ "github.com/iopq/xraya/pkg/plugin/ws"
+	"github.com/iopq/xraya/pkg/util/log"
 	"runtime"
 )
 

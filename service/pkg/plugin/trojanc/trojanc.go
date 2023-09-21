@@ -10,8 +10,8 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
-	"github.com/xbclub/xraya/pkg/plugin"
-	"github.com/xbclub/xraya/pkg/plugin/socks"
+	"github.com/iopq/xraya/pkg/plugin"
+	"github.com/iopq/xraya/pkg/plugin/socks"
 	"net"
 	"net/url"
 )

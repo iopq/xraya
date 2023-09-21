@@ -3,9 +3,9 @@ package gopeed
 import (
 	"fmt"
 	gonanoid "github.com/matoous/go-nanoid"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/pkg/util/copyfile"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/pkg/util/copyfile"
+	"github.com/iopq/xraya/pkg/util/log"
 	"io"
 	"mime"
 	"net/http"

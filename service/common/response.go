@@ -2,7 +2,7 @@ package common
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/xbclub/xraya/infra/dataStructure/lru"
+	"github.com/iopq/xraya/infra/dataStructure/lru"
 	"net/http"
 )
 

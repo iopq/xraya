@@ -1,9 +1,9 @@
 package configure
 
 import (
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/core/ipforward"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/core/ipforward"
+	"github.com/iopq/xraya/pkg/util/log"
 )
 
 type Setting struct {

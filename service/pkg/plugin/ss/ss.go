@@ -3,7 +3,7 @@ package ss
 import (
 	"fmt"
 	ss "github.com/shadowsocks/go-shadowsocks2/core"
-	"github.com/xbclub/xraya/pkg/plugin"
+	"github.com/iopq/xraya/pkg/plugin"
 	"net"
 	"net/url"
 )

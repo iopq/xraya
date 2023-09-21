@@ -2,7 +2,7 @@ package where
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/conf"
+	"github.com/iopq/xraya/conf"
 	"os"
 	"os/exec"
 	"path"

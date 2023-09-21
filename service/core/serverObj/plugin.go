@@ -3,9 +3,9 @@ package serverObj
 import (
 	"fmt"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/core/coreObj"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/core/coreObj"
+	"github.com/iopq/xraya/pkg/util/log"
 	"os/exec"
 	"strconv"
 	"strings"

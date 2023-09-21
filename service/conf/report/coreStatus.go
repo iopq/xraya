@@ -3,9 +3,9 @@ package report
 import (
 	"fmt"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/xbclub/xraya/core/v2ray"
-	"github.com/xbclub/xraya/core/v2ray/asset"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/core/v2ray"
+	"github.com/iopq/xraya/core/v2ray/asset"
+	"github.com/iopq/xraya/db/configure"
 	"net"
 	"strconv"
 	"strings"

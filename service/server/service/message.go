@@ -2,7 +2,7 @@ package service
 
 import (
 	"github.com/gorilla/websocket"
-	"github.com/xbclub/xraya/core/v2ray"
+	"github.com/iopq/xraya/core/v2ray"
 	"sync"
 	"time"
 )

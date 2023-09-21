@@ -3,9 +3,9 @@ package service
 import (
 	"bytes"
 	"fmt"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/core/v2ray/asset"
-	"github.com/xbclub/xraya/core/v2ray/where"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/core/v2ray/asset"
+	"github.com/iopq/xraya/core/v2ray/where"
 	"os/exec"
 	"strings"
 )

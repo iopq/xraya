@@ -3,8 +3,8 @@ package service
 import (
 	"bytes"
 	"fmt"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/conf"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/conf"
 	"net/http"
 	"strings"
 )

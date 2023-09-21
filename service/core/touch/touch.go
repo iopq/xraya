@@ -2,8 +2,8 @@ package touch
 
 import (
 	jsoniter "github.com/json-iterator/go"
-	"github.com/xbclub/xraya/db/configure"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/db/configure"
+	"github.com/iopq/xraya/pkg/util/log"
 	"net"
 	"net/url"
 	"strconv"

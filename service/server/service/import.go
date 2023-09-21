@@ -2,18 +2,18 @@ package service
 
 import (
 	"fmt"
-	"github.com/xbclub/xraya/conf"
+	"github.com/iopq/xraya/conf"
 	url2 "net/url"
 	"strings"
 	"time"
 
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/common/httpClient"
-	"github.com/xbclub/xraya/common/resolv"
-	"github.com/xbclub/xraya/core/serverObj"
-	"github.com/xbclub/xraya/core/touch"
-	"github.com/xbclub/xraya/core/v2ray"
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/common/httpClient"
+	"github.com/iopq/xraya/common/resolv"
+	"github.com/iopq/xraya/core/serverObj"
+	"github.com/iopq/xraya/core/touch"
+	"github.com/iopq/xraya/core/v2ray"
+	"github.com/iopq/xraya/db/configure"
 )
 
 func PluginManagerValidateLink(url string) bool {

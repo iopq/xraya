@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/xbclub/xraya/db/configure"
+	"github.com/iopq/xraya/db/configure"
 )
 
 func DeleteWhich(ws []*configure.Which) (err error) {

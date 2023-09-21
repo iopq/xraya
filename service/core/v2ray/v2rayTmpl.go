@@ -9,20 +9,20 @@ import (
 	jsoniter "github.com/json-iterator/go"
 	"github.com/mohae/deepcopy"
 	"github.com/v2rayA/RoutingA"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/common/netTools/netstat"
-	"github.com/xbclub/xraya/common/netTools/ports"
-	"github.com/xbclub/xraya/conf"
-	"github.com/xbclub/xraya/core/coreObj"
-	"github.com/xbclub/xraya/core/iptables"
-	"github.com/xbclub/xraya/core/serverObj"
-	"github.com/xbclub/xraya/core/specialMode"
-	"github.com/xbclub/xraya/core/v2ray/asset"
-	"github.com/xbclub/xraya/core/v2ray/service"
-	"github.com/xbclub/xraya/core/v2ray/where"
-	"github.com/xbclub/xraya/db/configure"
-	"github.com/xbclub/xraya/pkg/plugin"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/common/netTools/netstat"
+	"github.com/iopq/xraya/common/netTools/ports"
+	"github.com/iopq/xraya/conf"
+	"github.com/iopq/xraya/core/coreObj"
+	"github.com/iopq/xraya/core/iptables"
+	"github.com/iopq/xraya/core/serverObj"
+	"github.com/iopq/xraya/core/specialMode"
+	"github.com/iopq/xraya/core/v2ray/asset"
+	"github.com/iopq/xraya/core/v2ray/service"
+	"github.com/iopq/xraya/core/v2ray/where"
+	"github.com/iopq/xraya/db/configure"
+	"github.com/iopq/xraya/pkg/plugin"
+	"github.com/iopq/xraya/pkg/util/log"
 	"net"
 	"net/url"
 	"os"
@@ -522,7 +522,7 @@ func (t *Template) AppendRoutingRuleByMode(mode configure.RulePortMode, inbounds
 				Type:        "field",
 				OutboundTag: "proxy",
 				InboundTag:  deepcopy.Copy(inbounds).([]string),
-				// https://github.com/xbclub/xraya/issues/285
+				// https://github.com/iopq/xraya/issues/285
 				Domain: []string{"geosite:google"},
 			},
 			coreObj.RoutingRule{
@@ -992,7 +992,7 @@ func (t *Template) appendDNSOutbound() {
 	t.Outbounds = append(t.Outbounds, coreObj.OutboundObject{
 		Tag:      "dns-out",
 		Protocol: "dns",
-		// Fallback DNS for non-A/AAAA/CNAME requests. https://github.com/xbclub/xraya/issues/188
+		// Fallback DNS for non-A/AAAA/CNAME requests. https://github.com/iopq/xraya/issues/188
 		Settings: coreObj.Settings{Address: "119.29.29.29", Port: 53, Network: "udp"},
 	})
 }
@@ -1089,7 +1089,7 @@ func (t *Template) setInbound() error {
 					Network: "udp",
 					// the non-A/AAAA/CNAME problem has been fixed by the setting in DNS outbound.
 					// so the Address here is innocuous.
-					// related commit: https://github.com/xbclub/xraya/commit/ecbf915d4be8b9066955a21059519266bcca6b92
+					// related commit: https://github.com/iopq/xraya/commit/ecbf915d4be8b9066955a21059519266bcca6b92
 					Address: "2.0.1.7",
 					Port:    53,
 				},
@@ -1606,7 +1606,7 @@ func NewTemplate(serverInfos []serverInfo, setting *configure.Setting) (t *Templ
 
 	t.updatePrivateRouting()
 
-	// add spare tire outbound routing. Fix: https://github.com/xbclub/xraya/issues/447
+	// add spare tire outbound routing. Fix: https://github.com/iopq/xraya/issues/447
 	t.Routing.Rules = append(t.Routing.Rules, coreObj.RoutingRule{Type: "field", Network: "tcp,udp", OutboundTag: "proxy"})
 
 	// Set group routing. This should be put in the end of routing setters.

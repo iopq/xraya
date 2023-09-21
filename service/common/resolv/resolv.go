@@ -1,7 +1,7 @@
 package resolv
 
 import (
-	"github.com/xbclub/xraya/conf"
+	"github.com/iopq/xraya/conf"
 	"os"
 	"strings"
 )
