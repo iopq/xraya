@@ -13,10 +13,10 @@ import (
 
 	jsoniter "github.com/json-iterator/go"
 	"github.com/tidwall/gjson"
-	"github.com/xbclub/xraya/common"
-	"github.com/xbclub/xraya/core/coreObj"
-	"github.com/xbclub/xraya/core/v2ray/service"
-	"github.com/xbclub/xraya/pkg/util/log"
+	"github.com/iopq/xraya/common"
+	"github.com/iopq/xraya/core/coreObj"
+	"github.com/iopq/xraya/core/v2ray/service"
+	"github.com/iopq/xraya/pkg/util/log"
 )
 
 func init() {
@@ -46,6 +46,10 @@ type V2Ray struct {
 	AllowInsecure bool   `json:"allowInsecure"`
 	V             string `json:"v"`
 	Protocol      string `json:"protocol"`
+	Fingerprint   string `json:"fingerprint"`
+	PublicKey     string `json:"publicKey"`
+	ShortId       string `json:"shortId"`
+	SpiderX       string `json:"spiderX"`
 }
 
 func NewV2Ray(link string) (ServerObj, error) {
@@ -76,6 +80,10 @@ func ParseVlessURL(vless string) (data *V2Ray, err error) {
 		Alpn:          u.Query().Get("alpn"),
 		AllowInsecure: u.Query().Get("allowInsecure") == "true",
 		Protocol:      "vless",
+		Fingerprint:   u.Query().Get("fingerprint"),
+		PublicKey:     u.Query().Get("publicKey"),
+		ShortId:       u.Query().Get("shortId"),
+		SpiderX:       u.Query().Get("spiderX"),
 	}
 	if data.Net == "" {
 		data.Net = "tcp"
@@ -365,6 +373,38 @@ func (v *V2Ray) Configuration(info PriorInfo) (c Configuration, err error) {
 			vnext := core.Settings.Vnext.([]coreObj.Vnext)
 			vnext[0].Users[0].Flow = v.Flow
 			core.Settings.Vnext = vnext
+		} else if strings.ToLower(v.TLS) == "reality" {
+			core.StreamSettings.Security = "reality"
+			core.StreamSettings.RealitySettings = &coreObj.TLSSettings{}
+			// SNI
+			if v.Host != "" {
+				core.StreamSettings.RealitySettings.ServerName = v.Host
+			}
+			if v.AllowInsecure {
+				core.StreamSettings.RealitySettings.AllowInsecure = true
+			}
+			if v.Flow == "" {
+				v.Flow = "xtls-rprx-origin"
+			}
+			if v.Alpn != "" {
+				alpn := strings.Split(v.Alpn, ",")
+				for i := range alpn {
+					alpn[i] = strings.TrimSpace(alpn[i])
+				}
+				core.StreamSettings.TLSSettings.Alpn = alpn
+			}
+			if v.Fingerprint != "" {
+			        core.StreamSettings.RealitySettings.Fingerprint = v.Fingerprint
+			}
+			if v.PublicKey != "" {
+			        core.StreamSettings.RealitySettings.PublicKey = v.PublicKey
+			}
+			core.StreamSettings.RealitySettings.ShortId = v.ShortId
+			core.StreamSettings.RealitySettings.SpiderX = v.SpiderX
+			
+			vnext := core.Settings.Vnext.([]coreObj.Vnext)
+			vnext[0].Users[0].Flow = v.Flow
+			core.Settings.Vnext = vnext
 		}
 	}
 	return Configuration{
@@ -401,8 +441,15 @@ func (v *V2Ray) ExportToURL() string {
 			setValue(&query, "alpn", v.Alpn)
 			setValue(&query, "allowInsecure", strconv.FormatBool(v.AllowInsecure))
 		}
-		if v.TLS == "xtls" || v.TLS == "tls" {
+		if v.TLS == "xtls" || v.TLS == "tls" || v.TLS == "reality" {
 			setValue(&query, "flow", v.Flow)
+		}
+		
+		if v.TLS == "reality" {
+		       setValue(&query, "fingerprint", v.FingerPrint)
+		       setValue(&query, "publicKey", v.PublicKey)
+		       setValue(&query, "shortId", v.ShortId)
+		       setValue(&query, "spiderX", v.SpiderX)
 		}
 
 		U := url.URL{

@@ -92,10 +92,63 @@
                 value="xtls"
                 >xtls</option
               >
+              <option
+                v-if="v2ray.protocol === 'vless' && vlessVersion >= 2"
+                value="reality"
+                >reality</option
+              >
             </b-select>
           </b-field>
           <b-field
-            v-show="v2ray.tls === 'xtls' || v2ray.tls === 'tls'"
+            v-show="v2ray.tls === 'reality'"
+            label="Fingerprint"
+            label-position="on-border"
+          >
+            <b-select v-model="v2ray.fingerprint">
+              <option value="none">{{ $t("setting.options.off") }}</option>
+              <option value="chrome">chrome</option>
+              <option value="firefox">firefox</option>
+              <option value="safari">safari</option>
+              <option value="ios">iOS</option>
+              <option value="android">android</option>
+              <option value="edge">edge</option>
+              <option value="360">360</option>
+              <option value="qq">qq</option>
+              <option value="random">random</option>
+              <option value="randomized">randomized</option>
+          </b-field>
+          <b-field
+            v-show="v2ray.tls === 'reality'"
+            label="PublicKey"
+            label-position="on-border"
+          >
+            <b-input
+              v-model="v2ray.publicKey"
+              expanded
+            />
+          </b-field>
+          <b-field
+            v-show="v2ray.tls === 'reality'"
+            label="ShortId"
+            label-position="on-border"
+          >
+            <b-input
+              v-model="v2ray.shortId"
+              expanded
+            />
+          </b-field>
+          <b-field
+            v-show="v2ray.tls === 'reality'"
+            label="SpiderX"
+            label-position="on-border"
+          >
+            <b-input
+              v-model="v2ray.spiderX"
+              expanded
+            />
+          </b-field>
+          <b-field
+            v-show="v2ray.tls === 'xtls' || v2ray.tls === 'tls' || v2ray.tls === 'reality'"
             label="Flow"
             label-position="on-border"
           >
@@ -200,6 +253,7 @@
                 v2ray.net === 'h2' ||
                 v2ray.tls === 'tls' ||
                 v2ray.tls === 'xtls' ||
+                v2ray.tls === 'reality' ||
                 (v2ray.net === 'tcp' && v2ray.type === 'http')
             "
             label="Host"
@@ -212,7 +266,7 @@
             />
           </b-field>
           <b-field
-            v-show="v2ray.tls === 'tls' || v2ray.tls === 'xtls'"
+            v-show="v2ray.tls === 'tls' || v2ray.tls === 'xtls' || v2ray.tls === 'reality'"
             label="Alpn"
             label-position="on-border"
           >

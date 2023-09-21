@@ -113,6 +113,10 @@ type TLSSettings struct {
 	Alpn                             []string      `json:"alpn,omitempty"`
 	PinnedPeerCertificateChainSha256 string        `json:"pinnedPeerCertificateChainSha256,omitempty"`
 	Certificates                     []Certificate `json:"certificates,omitempty"`
+	Fingerprint                      string      `json:"fingerprint,omitempty"`
+	PublicKey                        string      `json:"publicKey,omitempty"`
+	ShortId                          string      `json:"shortId,omitempty"`
+	SpiderX                          string      `json:"spiderX,omitempty"`
 }
 type Certificate struct {
 	CertificateFile string `json:"certificateFile"`
@@ -126,16 +130,17 @@ type WsSettings struct {
 	Headers Headers `json:"headers"`
 }
 type StreamSettings struct {
-	Network      string        `json:"network,omitempty"`
-	Security     string        `json:"security,omitempty"`
-	TLSSettings  *TLSSettings  `json:"tlsSettings,omitempty"`
-	XTLSSettings *TLSSettings  `json:"xtlsSettings,omitempty"`
-	TCPSettings  *TCPSettings  `json:"tcpSettings,omitempty"`
-	KcpSettings  *KcpSettings  `json:"kcpSettings,omitempty"`
-	WsSettings   *WsSettings   `json:"wsSettings,omitempty"`
-	HTTPSettings *HttpSettings `json:"httpSettings,omitempty"`
-	GrpcSettings *GrpcSettings `json:"grpcSettings,omitempty"`
-	Sockopt      *Sockopt      `json:"sockopt,omitempty"`
+	Network      string            `json:"network,omitempty"`
+	Security     string            `json:"security,omitempty"`
+	TLSSettings  *TLSSettings      `json:"tlsSettings,omitempty"`
+	XTLSSettings *TLSSettings      `json:"xtlsSettings,omitempty"`
+	RealitySettings *TLSSettings   `json:"realitySettings,omitempty"`
+	TCPSettings  *TCPSettings      `json:"tcpSettings,omitempty"`
+	KcpSettings  *KcpSettings      `json:"kcpSettings,omitempty"`
+	WsSettings   *WsSettings       `json:"wsSettings,omitempty"`
+	HTTPSettings *HttpSettings     `json:"httpSettings,omitempty"`
+	GrpcSettings *GrpcSettings     `json:"grpcSettings,omitempty"`
+	Sockopt      *Sockopt          `json:"sockopt,omitempty"`
 }
 type GrpcSettings struct {
 	ServiceName string `json:"serviceName"`
