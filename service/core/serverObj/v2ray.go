@@ -446,7 +446,7 @@ func (v *V2Ray) ExportToURL() string {
 		}
 		
 		if v.TLS == "reality" {
-		       setValue(&query, "fingerprint", v.FingerPrint)
+		       setValue(&query, "fingerprint", v.Fingerprint)
 		       setValue(&query, "publicKey", v.PublicKey)
 		       setValue(&query, "shortId", v.ShortId)
 		       setValue(&query, "spiderX", v.SpiderX)

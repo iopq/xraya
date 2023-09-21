@@ -848,7 +848,11 @@ export default {
       alpn: "",
       v: "",
       allowInsecure: false,
-      protocol: "vmess"
+      protocol: "vmess",
+      fingerprint: "",
+      publicKey: "",
+      shortId: "",
+      spiderX: ""
     },
     ss: {
       method: "aes-128-gcm",
@@ -1048,7 +1052,11 @@ export default {
           tls: u.params.security || "none",
           flow: u.params.flow || "xtls-rprx-direct",
           allowInsecure: u.params.allowInsecure || false,
-          protocol: "vless"
+          protocol: "vless",
+          fingerprint: u.params.fingerprint || "",
+          publicKey: u.params.publicKey || "",
+          shortId: u.params.shortId || "",
+          spiderX: u.params.spiderX || ""
         };
         if (o.alpn !== "") {
           o.alpn = decodeURIComponent(o.alpn);
@@ -1254,7 +1262,11 @@ export default {
             headerType: srcObj.type,
             sni: srcObj.host,
             flow: srcObj.flow,
-            allowInsecure: srcObj.allowInsecure
+            allowInsecure: srcObj.allowInsecure,
+            fingerprint: srcObj.fingerprint,
+            publicKey: srcObj.publicKey,
+            shortId: srcObj.shortId,
+            spiderX: srcObj.spiderX
           };
           if (srcObj.alpn !== "") {
             query.alpn = srcObj.alpn;
