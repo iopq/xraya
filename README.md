@@ -1,4 +1,4 @@
-# xrayA [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/xbclub/xraya)](https://hub.docker.com/r/mzz2017/v2raya) [![Travis (.org)](https://img.shields.io/travis/xbclub/xraya?label=travis-ci%20build)](https://travis-ci.org/xbclub/xraya)
+# xrayA [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/xbclub/xraya)](https://hub.docker.com/r/mzz2017/v2raya)
 
 [**English**](https://github.com/xbclub/xraya/blob/master/README.md)&nbsp;&nbsp;&nbsp;[**简体中文**](https://github.com/xbclub/xraya/blob/master/README_zh.md)
 
