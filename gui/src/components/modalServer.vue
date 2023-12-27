@@ -848,11 +848,7 @@ export default {
       alpn: "",
       v: "",
       allowInsecure: false,
-      protocol: "vmess",
-      fingerprint: "",
-      publicKey: "",
-      shortId: "",
-      spiderX: ""
+      protocol: "vmess"
     },
     ss: {
       method: "aes-128-gcm",
